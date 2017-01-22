@@ -1299,8 +1299,7 @@ namespace DesempleoApp
             sql += ",Desempleo.Cargo,Desempleo.Observaciones,usuarios.nombre ";
             sql += "FROM Desempleo, RF, usuarios ";
 
-            //if (condicion.Length > 0)
-                sql += " WHERE Desempleo.id=RF.iddesempleo AND usuarios.id=RF.idusuario AND Desempleo.estado=1 "+condicion;
+            sql += " WHERE Desempleo.id=RF.iddesempleo AND usuarios.id=RF.idusuario AND Desempleo.estado=1 "+condicion;
 
             sql += " ORDER BY Desempleo.id asc ";
             OleDbDataAdapter da = new OleDbDataAdapter(sql, con1);
